@@ -70,5 +70,8 @@ def test_DataValidations():
     if not diff.empty:
         # Save mismatch to Excel
         diff.to_excel("reports/ColumnWise_Mismatch_Report.xlsx", sheet_name="Mismatch")
+
+        with open("reports/ColumnWise_Mismatch_Report.html", "w", encoding="utf-8") as f:
+            f.write(diff.to_html(border=1, justify="center", index=True))
     assert df_source.equals(df_target), f"Mismatch:\n{diff}"
 
