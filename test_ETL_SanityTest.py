@@ -1,14 +1,14 @@
 import pandas as pd
 import connectionToDatabase as conn
 
-df_source = pd.read_csv("J:\MyData\ETLData\customer_source.csv")
+df_source = pd.read_csv("J:/MyData/ETLData/customer_source.csv")
 print(df_source)
 
 targetSQL = "select * from dim_customer"
 df_target = pd.read_sql(targetSQL, conn.conn)
 print(df_target)
 
-df_mapping = pd.read_excel("J:\MyData\ETLData\Customer_ETL_Mapping.xlsx", sheet_name="Source_to_Target")
+df_mapping = pd.read_excel("J:/MyData/ETLData/Customer_ETL_Mapping.xlsx", sheet_name="Source_to_Target")
 print(df_mapping)
 
 def test_countValidation():
