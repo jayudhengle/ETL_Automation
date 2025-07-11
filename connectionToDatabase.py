@@ -2,7 +2,7 @@ import pyodbc
 import pandas as pd
 
 # Define connection parameters
-server = 'localhost\SQLEXPRESS'  # e.g., 'localhost' or 'MY-PC\SQLEXPRESS'
+server = 'localhost/git SQLEXPRESS'  # e.g., 'localhost' or 'MY-PC\SQLEXPRESS'
 database = 'jayudb'
 username = "myuser"
 password = "myuser"
